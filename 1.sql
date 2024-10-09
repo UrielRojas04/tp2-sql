@@ -1,0 +1,10 @@
+/*LA TABLA PROVEEDORES ESTA CREADA  EN LA QUERY 35 Y SUS VALORES TAMBIEN */
+CREATE TABLE productos ( 
+id_producto INTEGER AUTO_INCREMENT PRIMARY KEY, 
+nombre VARCHAR(100) NOT NULL, 
+precio DECIMAL(10, 2) NOT NULL, 
+categoria VARCHAR(50) NOT NULL, 
+fecha_lanzamiento DATE NOT NULL, 
+proveedor_id INT, 
+FOREIGN KEY (proveedor_id) REFERENCES proveedores(id) 
+);
